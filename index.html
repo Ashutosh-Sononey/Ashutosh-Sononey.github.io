@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Flipbook</title>
+    <title>Image Flipbook</title>
     <style>
-        #flipbook { width: 400px; height: 300px; }
-        .page { width: 100%; height: 100%; background: #fff; display: flex; justify-content: center; align-items: center; border: 1px solid #ccc; font-size: 24px; }
+        #flipbook { width: 600px; height: 400px; }
+        .page { width: 100%; height: 100%; }
+        img { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body>
 
 <div id="flipbook">
-    <div class="page">Cover</div>
-    <div class="page">Page 1</div>
-    <div class="page">Page 2</div>
-    <div class="page">Back Cover</div>
+    <div class="page"><img src="https://tse3.mm.bing.net/th?id=OIP.SEQxKxB57gtr0c2PkL-7YAHaEK&pid=Api" alt="Cool Image 1"></div>
+    <div class="page"><img src="https://tse4.mm.bing.net/th?id=OIP.9LTEojgjhNYXgisudT6MMQHaEo&pid=Api" alt="Cool Image 2"></div>
+    <div class="page"><img src="https://tse4.mm.bing.net/th?id=OIP.WCrrbyRoxtlb0pgNhR7pMAHaEK&pid=Api" alt="Cool Image 3"></div>
+    <div class="page"><img src="https://tse3.mm.bing.net/th?id=OIP.eV1yBtQ0xPhr0n56ewhcxwHaFj&pid=Api" alt="Cool Image 4"></div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="turn.min.js"></script>
-<script> $("#flipbook").turn(); </script>
+<script>
+    $(document).ready(function() {
+        $("#flipbook").turn({
+            width: 600,
+            height: 400,
+            autoCenter: true
+        });
+    });
+</script>
 
 </body>
 </html>
