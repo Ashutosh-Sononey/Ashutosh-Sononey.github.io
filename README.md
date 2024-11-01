@@ -1,3 +1,4 @@
+<html>
 <div id="flipbook">
 	<div class="hard"> Turn.js </div>
 	<div class="hard"></div>
@@ -15,3 +16,4 @@
 		autoCenter: true
 	});
 </script>
+</html>
