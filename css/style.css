@@ -1,0 +1,61 @@
+/* Theme color definitions */
+/* Define root variables for easy theme customization across the site. */
+:root {
+    --color-background: #1a1a2e; /* Deep dark blue/purple - Main page background */
+    --color-surface: #162447; /* Slightly lighter blue - Used for cards, header, etc. */
+    --color-text-primary: #e0e0e0; /* Light gray - Primary text color for readability */
+    --color-text-secondary: #b0b0b0; /* Softer gray - Secondary text, subtitles, etc. */
+    --color-accent: #1f78c1; /* Vibrant blue - Accent color for buttons, links, highlights */
+    --color-accent-hover: #238add; /* Lighter blue - Hover state for accent elements */
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example font stack */
+    scroll-behavior: smooth; /* For smooth scrolling on anchor links */
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* Basic heading styling if needed, though Tailwind classes are preferred */
+}
+
+/* Custom class example for project cards if more specific styling is needed beyond Tailwind */
+/* .project-card { */
+    /* Add custom styles here */
+/* } */
+
+/* Ensure full height for hero if not using min-h-screen or if more control is needed */
+/* #hero { */
+    /* height: 100vh; */
+/* } */
+
+/* Full-page animated gradient background */
+/* This pseudo-element creates a dynamic gradient that sits behind all other content. */
+body::before {
+    content: ''; /* Required for pseudo-elements */
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Ensures the background stays behind all other content */
+    background: linear-gradient( /* Defines the gradient colors and direction */
+        45deg, /* Gradient angle */
+        var(--color-accent),
+        var(--color-background),
+        #2c3e50, /* An additional shade for more complexity in the gradient */
+        var(--color-surface)
+    );
+    background-size: 400% 400%; /* Large background size for smooth animation */
+    animation: gradientAnimation 25s ease infinite; /* Links to the keyframes for animation */
+}
+
+/* Keyframes for the gradient animation */
+/* This animation changes the background-position to create a flowing effect. */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; } /* Start position */
+    50% { background-position: 100% 50%; } /* Mid-point position */
+    100% { background-position: 0% 50%; } /* Return to start position */
+}

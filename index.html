@@ -1,33 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Image Flipbook</title>
-    <style>
-        #flipbook { width: 600px; height: 400px; }
-        .page { width: 100%; height: 100%; }
-        img { width: 100%; height: 100%; object-fit: cover; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - Portfolio</title> <!-- Updated Title -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-[var(--color-background)] text-[var(--color-text-primary)]">
 
-<div id="flipbook">
-    <div class="page"><img src="https://tse3.mm.bing.net/th?id=OIP.SEQxKxB57gtr0c2PkL-7YAHaEK&pid=Api" alt="Cool Image 1"></div>
-    <div class="page"><img src="https://tse4.mm.bing.net/th?id=OIP.9LTEojgjhNYXgisudT6MMQHaEo&pid=Api" alt="Cool Image 2"></div>
-    <div class="page"><img src="https://tse4.mm.bing.net/th?id=OIP.WCrrbyRoxtlb0pgNhR7pMAHaEK&pid=Api" alt="Cool Image 3"></div>
-    <div class="page"><img src="https://tse3.mm.bing.net/th?id=OIP.eV1yBtQ0xPhr0n56ewhcxwHaFj&pid=Api" alt="Cool Image 4"></div>
-</div>
+    <!-- Header -->
+    <header class="bg-[var(--color-surface)] shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between items-center"> <!-- Added flex-wrap -->
+            <div class="text-2xl font-bold text-[var(--color-text-primary)]">[Your Name]</div> <!-- Updated Name Placeholder -->
+            <nav class="mt-2 md:mt-0"> <!-- Added margin top for small screens if nav wraps -->
+                <ul class="flex space-x-4">
+                    <li><a href="#hero" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]">Home</a></li>
+                    <li><a href="#about" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]">About</a></li>
+                    <li><a href="#skills" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]">Skills</a></li>
+                    <li><a href="#projects" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]">Projects</a></li>
+                    <li><a href="#contact" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="turn.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#flipbook").turn({
-            width: 600,
-            height: 400,
-            autoCenter: true
-        });
-    });
-</script>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section Start -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center p-6 relative">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">[Your Name / Professional Title]</h1> <!-- Updated Hero H1 with responsive text size -->
+            <p class="text-xl text-[var(--color-text-secondary)] mb-8">[Your catchy tagline or brief professional summary here]</p> <!-- Updated Hero Paragraph -->
+            <a href="#projects" class="bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300">[View My Projects]</a> <!-- Updated CTA Text -->
+        </section>
+        <!-- Hero Section End -->
 
+        <!-- About Me Section Start -->
+        <section id="about" class="py-16 px-6 bg-[var(--color-background)]">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[var(--color-accent)]">About Me</h2>
+                <!-- Replace this with your detailed 'About Me' content. -->
+                <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed max-w-2xl mx-auto">
+                    Detailed description about yourself, your background, passions, and professional journey.
+                    Highlight key experiences and what drives you. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </section>
+        <!-- About Me Section End -->
+
+        <!-- Skills Section Start -->
+        <section id="skills" class="py-16 px-6 bg-[var(--color-surface)]">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-[var(--color-accent)]">Skills</h2>
+                <!-- Replace these with your actual skills. You can add or remove list items as needed. -->
+                <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <li class="skill-item bg-[var(--color-background)] p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <span class="text-2xl font-semibold text-[var(--color-text-primary)]">[Skill Name 1]</span>
+                    </li>
+                    <li class="skill-item bg-[var(--color-background)] p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <span class="text-2xl font-semibold text-[var(--color-text-primary)]">[Skill Name 2]</span>
+                    </li>
+                    <li class="skill-item bg-[var(--color-background)] p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <span class="text-2xl font-semibold text-[var(--color-text-primary)]">[Skill Name 3]</span>
+                    </li>
+                    <li class="skill-item bg-[var(--color-background)] p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <span class="text-2xl font-semibold text-[var(--color-text-primary)]">[Skill Name 4]</span>
+                    </li>
+                    <!-- Add more skill items here if needed -->
+                </ul>
+            </div>
+        </section>
+        <!-- Skills Section End -->
+
+        <!-- Projects Section Start -->
+        <section id="projects" class="py-16 px-6 bg-[var(--color-background)]">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-[var(--color-accent)]">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <!-- Added grid-cols-1 for smallest screens -->
+                    <!-- Project Card 1 -->
+                    <article class="project-card bg-[var(--color-surface)] p-6 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                        <!-- Project Image Placeholder: e.g., <img src='images/project-1.jpg' alt='[Project Title] Screenshot' class='w-full h-full object-cover rounded-md'> -->
+                        <div class="aspect-video bg-[var(--color-text-secondary)] rounded-md flex items-center justify-center text-[var(--color-background)] mb-4">
+                            <p>Project Image</p>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-[var(--color-text-primary)]">[Project Title 1]</h3>
+                        <p class="text-[var(--color-text-secondary)] mb-3">[Brief description of your project, its purpose, and your role.]</p>
+                        <p class="text-sm text-[var(--color-text-secondary)] mb-4"><strong>Technologies:</strong> [Tech Stack Used, e.g., HTML, CSS, JavaScript]</p>
+                        <div class="flex justify-between">
+                            <!-- Link to Live Demo -->
+                            <a href="#" class="text-[var(--color-accent)] hover:underline font-medium">Live Demo</a>
+                            <!-- Link to Source Code -->
+                            <a href="#" class="text-[var(--color-accent)] hover:underline font-medium">Source Code</a>
+                        </div>
+                    </article>
+                    <!-- Project Card 2 -->
+                    <article class="project-card bg-[var(--color-surface)] p-6 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                        <!-- Project Image Placeholder: e.g., <img src='images/project-2.jpg' alt='[Project Title] Screenshot' class='w-full h-full object-cover rounded-md'> -->
+                        <div class="aspect-video bg-[var(--color-text-secondary)] rounded-md flex items-center justify-center text-[var(--color-background)] mb-4">
+                            <p>Project Image</p>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-[var(--color-text-primary)]">[Project Title 2]</h3>
+                        <p class="text-[var(--color-text-secondary)] mb-3">[Brief description of your project, its purpose, and your role.]</p>
+                        <p class="text-sm text-[var(--color-text-secondary)] mb-4"><strong>Technologies:</strong> [Tech Stack Used, e.g., React, Node.js]</p>
+                        <div class="flex justify-between">
+                            <!-- Link to Live Demo -->
+                            <a href="#" class="text-[var(--color-accent)] hover:underline font-medium">Live Demo</a>
+                            <!-- Link to Source Code -->
+                            <a href="#" class="text-[var(--color-accent)] hover:underline font-medium">Source Code</a>
+                        </div>
+                    </article>
+                    <!-- Project Card 3 (Add more cards as needed) -->
+                    <article class="project-card bg-[var(--color-surface)] p-6 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                         <!-- Project Image Placeholder: e.g., <img src='images/project-3.jpg' alt='[Project Title] Screenshot' class='w-full h-full object-cover rounded-md'> -->
+                        <div class="aspect-video bg-[var(--color-text-secondary)] rounded-md flex items-center justify-center text-[var(--color-background)] mb-4">
+                            <p>Project Image</p>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-[var(--color-text-primary)]">[Project Title 3]</h3>
+                        <p class="text-[var(--color-text-secondary)] mb-3">[Brief description of your project, its purpose, and your role.]</p>
+                        <p class="text-sm text-[var(--color-text-secondary)] mb-4"><strong>Technologies:</strong> [Tech Stack Used, e.g., Vue, Firebase]</p>
+                        <div class="flex justify-between">
+                            <!-- Link to Live Demo -->
+                            <a href="#" class="text-[var(--color-accent)] hover:underline font-medium">Live Demo</a>
+                            <!-- Link to Source Code -->
+                            <a href="#" class="text-[var(--color-accent)] hover:underline font-medium">Source Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section End -->
+
+        <!-- Contact Section Start -->
+        <section id="contact" class="py-16 px-6 bg-[var(--color-surface)]">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8 text-[var(--color-accent)]">Get in Touch</h2>
+                <p class="text-lg text-[var(--color-text-secondary)] mb-4">Feel free to reach out for collaborations or just a friendly chat!</p>
+                <!-- Your Email Address -->
+                <a href="mailto:youremail@example.com" class="text-[var(--color-accent)] hover:underline text-xl">youremail@example.com</a>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <!-- Your LinkedIn Profile URL -->
+                    <a href="#" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]">LinkedIn</a>
+                    <!-- Your GitHub Profile URL -->
+                    <a href="#" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]">GitHub</a>
+                    <!-- Your Twitter/X Profile URL (Optional) -->
+                    <a href="#" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]">Twitter</a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+    </main>
+
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+    <footer class="bg-black text-[var(--color-text-secondary)] py-8 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2024 [Your Name]. All rights reserved.</p> <!-- Updated Copyright Name -->
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
